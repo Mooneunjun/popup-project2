@@ -10,7 +10,7 @@
   <body>
     <button class="show-popup">Show Popup</button>
 
-    <div class="popup-container">
+    <dialog class="popup-container">
       <div class="popup-box">
         <h1>Hello World!</h1>
         <p>
@@ -19,9 +19,11 @@
           reprehenderit fugit nisi et? Exercitationem consectetur, dolorum et
           numquam fugit officia quibusdam eum fugiat.
         </p>
-        <button class="close-btn">OK</button>
+        <form method="dialog">
+          <button class="close-btn" value="close">OK</button>
+        </form>
       </div>
-    </div>
+    </dialog>
 
     <script src="./assets/js/main.js"></script>
   </body>

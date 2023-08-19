@@ -26,32 +26,20 @@ body {
 }
 
 .popup-container {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  border: none;
+  border-radius: 6px;
   opacity: 0;
-  pointer-events: none;
-}
-.popup-container.active {
-  opacity: 1;
-  pointer-events: auto;
-  transition: 0.4s ease;
-}
-.popup-container.active .popup-box {
-  transform: scale(1);
-  transition: 0.4s ease;
+  transition: opacity 0.4s ease, transform 0.4s ease;
 }
 .popup-container .popup-box {
   width: 500px;
   background-color: #f2f2f2;
-  border-radius: 6px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 30px;
-  transform: scale(0);
 }
 .popup-container .popup-box h1 {
   color: #333;

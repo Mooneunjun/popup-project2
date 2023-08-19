@@ -1,11 +1,16 @@
-const showPopup = document.querySelector(".show-popup");
-const popupContainer = document.querySelector(".popup-container");
-const closeBtn = document.querySelector(".close-btn");
+const button = document.querySelector("button");
+const dialog = document.querySelector("dialog");
 
-showPopup.onclick = () => {
-  popupContainer.classList.add("active");
-};
+button.addEventListener("click", () => {
+  dialog.showModal();
+  setTimeout(() => {
+    dialog.style.opacity = 1;
+    dialog.style.transform = "translate(-50%, -50%) scale(1)";
+  }, 0);
+});
 
-closeBtn.onclick = () => {
-  popupContainer.classList.remove("active");
-};
+dialog.addEventListener("close", () => {
+  dialog.style.opacity = 0;
+  dialog.style.transform = "translate(-50%, -50%) scale(0)";
+  console.log(dialog.returnValue);
+});
